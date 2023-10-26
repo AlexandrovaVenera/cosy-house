@@ -1,0 +1,196 @@
+.friends{
+    background: #F6F6F6;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+.friends__wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.friends-h2{
+    max-width: 400px;
+    text-align: center;
+}
+.friend__arrow{
+    min-width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease;
+}
+
+.item, .carousel{
+    display: flex;
+  }
+  
+  .carousel-wrapper {
+    width: 990px;
+    margin-left: 53px;
+    margin-right: 53px;
+    overflow: hidden;
+  }
+
+  .item {
+    gap: 90px;
+  }
+  
+  .carousel {
+    position: relative;
+    left: -1080px;
+    gap: 90px;
+  }
+  
+  @keyframes move-right {
+    from {left: -1080px;}
+    to {left: -2160px;}
+  }
+  
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+  }
+  
+  @keyframes move-left {
+    from {left: -1080px;}
+    to {left: 0px;}
+
+
+  }
+  
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+  }
+ 
+  
+
+
+.friend-slider__block{
+    cursor: pointer;
+    transition: all .5s ease;
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+    min-width: 270px;
+    max-width: 270px;
+    height: 435px;
+    & > img{
+        object-fit: contain;
+        height: 270px;
+    }
+}
+.friend-h4{
+    margin-top: 30px;
+}
+
+@media(hover:hover){
+.friend__arrow:hover{
+cursor: pointer;
+background: #FDDCC4;
+border: 2px solid #FDDCC4;
+
+}
+
+
+.friend-slider__block:hover{
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    &> .button-pets{
+        background: #FDDCC4;
+        border: 2px solid #FDDCC4;
+    }
+} 
+}
+@media screen and (max-width:1278px) {
+    @keyframes move-right {
+      from {left:-915px;}
+      to {left: -1830px;}
+    }
+    @keyframes move-left {
+       
+      from {left: -915px;}
+      to {left: -0px;}
+ 
+      }
+    .item {
+        gap: 40px;
+    }
+    .carousel {
+        left: -915px;
+        gap: 40px;
+
+      }
+      .carousel-wrapper {
+        width: 910px;
+        margin-left: 12px;
+        margin-right: 12px;
+  }
+}
+@media screen and (max-width:950px) {
+.carousel-wrapper{
+    width: 580px;
+}
+@keyframes move-right {
+    from {left: -615px;}
+    to {left: -1230px;}
+  }
+  @keyframes move-left {
+      from {left: -615px;}
+      to {left: 0px;}
+    }
+    .carousel {
+        left: -615px;
+      }
+
+}
+@media screen and (max-width:600px) {
+    .carousel-wrapper{
+        width: 270px;
+    }
+    @keyframes move-right {
+      from {left: -310px;}
+      to {left: -620px;}
+      }
+      @keyframes move-left {
+          
+          from {left: -310px;}
+        to {left: 0px;}
+        }
+        .carousel {
+            left: -310px;
+          }
+}
+@media screen and (max-width:500px) {
+.friends{
+padding-top: 42px;
+padding-bottom: 42px;
+}
+.friend__arrow{
+    position: absolute;
+    bottom: 0;
+}
+.friend-h4{
+    @include font($size: 2rem, $height:2.3rem);
+  }
+  
+.friend__left{
+    
+    left: 58px;
+}
+.friend__right{
+  right: 58px;
+
+}
+.friends-slider{
+    margin-left: 15px;
+}
+}

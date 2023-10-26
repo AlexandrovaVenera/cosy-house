@@ -1,0 +1,42 @@
+.menu-burger__header {
+    display: none;
+    position: relative; 
+    cursor: pointer;
+    width: 30px; 
+    height: 24px;
+    left: 0;
+    transition: all .5s ease;
+}
+.active__burger{
+    transform: rotate(90deg);
+
+}
+.menu-burger__header span, .menu-burger__header:after, .menu-burger__header:before{
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: #F1CDB3;  //#F1CDB3;
+    margin: 0 auto;
+}
+.menu-burger__header span{
+    top: 21px;
+}
+.menu-burger__header:after, .menu-burger__header:before{
+    content: '';
+}
+.menu-burger__header:after{
+    bottom: 11.5px;
+}
+.menu-burger__header:before{
+    top: 1px;
+}
+.pets-burger span, .pets-burger::after, .pets-burger::before{
+    background: #000000;;
+}
+
+
+@media(max-width: 767px){
+    .menu-burger__header {
+        display: block;
+    }
+}

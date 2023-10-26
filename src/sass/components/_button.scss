@@ -1,0 +1,39 @@
+.button{
+  padding: 15px 45px;
+  background: #F1CDB3;
+  border-radius: 100px;
+  color: #292929;
+  letter-spacing: 0.06em;
+  @include font($size:1.7rem, $height:2.2rem);
+  cursor: pointer;
+  display: inline-block;
+  transition: all .3s ease;
+}
+
+.button-pets{
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  padding: 13px 43px;
+  color: #292929;
+  font-family: 'Georgia';
+  letter-spacing: 0.06em;
+  @include font($size:1.7rem, $height:2.2rem);
+  margin: 30px auto;
+  background: none;
+  transition: all .3s ease;
+
+}
+
+@media(hover:hover){
+.button:hover{
+  background: #FDDCC4;;
+}
+.button-pets:hover{
+  background: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+}
+@media screen and (max-width:800px) {
+
+
+}

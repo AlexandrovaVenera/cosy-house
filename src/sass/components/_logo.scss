@@ -1,0 +1,26 @@
+.logo{
+  height: 60px;
+}
+.logo-title{
+  @include font($size:3.2rem, $height:3.6rem);
+  color: #F1CDB3;
+  margin-bottom: 8px;
+  transition: all .5s ease;
+  letter-spacing: 0.06em;
+  transition: all .5s ease;
+
+}
+.logo-subtitle{
+  color: #FFFFFF;
+  @include font($size:1.3rem, $height:1.5rem);
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 0.105em;
+  margin-left: 4px;
+}
+
+@media(hover:hover){
+  .logo:hover .logo-title{
+    color:  #FFFFFF;
+  }
+  
+  }

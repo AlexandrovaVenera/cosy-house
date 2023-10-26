@@ -1,0 +1,119 @@
+.pets{
+  background: #F6F6F6;
+  
+}
+.pets-title, .pets-title a,.pets-title-active a{
+  transition: all .3s ease;
+  color: #545454;
+}
+.pets-h2{
+  text-align: center;
+}
+.pet-blocks{
+  position: relative;
+  left: 0px;
+  max-width: 1200px;
+  min-width: 1200px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 40px;
+  max-height: 900px;
+  min-height: 900px;
+  overflow: hidden;
+  justify-content: center;
+  transform: translateX(0%);
+
+}
+.active-pagination{
+
+    transition: 0.5s;
+    transform: translateX(50%);
+}
+.page-block{
+  max-width: 340px;
+  display: flex;
+  column-gap: 20px;
+}
+.circle{
+  min-width: 52px;
+  min-height: 52px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  @include font(2rem, 2.3rem);
+  border-radius: 100px;
+  border: 2px solid #F1CDB3;
+  color: #292929;
+}
+.circle-prev{
+  //color: #CDCDCD;
+  //border: 2px solid #CDCDCD;
+  transition: all .3s ease;
+  //pointer-events: none;
+}
+
+.circle-current{
+  background: #F1CDB3;
+  border: 2px solid #F1CDB3;
+  color: #292929;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.circle-next{
+
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+
+@media(hover:hover){
+  .circle-current:hover, .circle-next:hover, .circle-prev:hover{
+    background: #FDDCC4;
+    border: 2px solid #FDDCC4;
+
+  }
+  .pets-title a:hover{
+    color: #292929;
+  }
+  .logo:hover .pets-title{
+    color:#292929;
+  }
+}
+
+@media screen and (max-width:1279px){
+  .pet-blocks{
+    max-width: 890px;
+    min-width: 890px;
+  }
+}
+@media screen and (max-width:969px){
+  .pet-blocks{
+    max-width: 580px;
+    min-width: 580px;
+    margin-top: 30px;
+    min-height: 1365px;
+    max-height: 1365px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width:639px){
+  .pet-blocks{
+    max-width: 270px;
+    min-width: 270px;
+  }
+}
+@media screen and (max-width:500px) {
+  .page-block{
+    column-gap: 10px;
+  }
+  .pet-blocks{
+    margin-top: 42px;
+    margin-bottom: 42px;
+  
+  }
+}

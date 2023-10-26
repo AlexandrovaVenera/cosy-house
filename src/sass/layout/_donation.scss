@@ -1,0 +1,101 @@
+.donation {
+    background: #F6F6F6;
+}
+
+.donation__wrapper {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    // padding-left: 183px;
+    // padding-right: 182px;
+}
+.donation-layout-2-columns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.donation__block{
+    padding-left: 30px;
+}
+.donation-desc{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    letter-spacing: 0.06em;
+    @include font($size:1.5rem, $height: 1.7rem);
+    color: #545454;
+}
+.donation-card a{
+    background: url(../assets/icons/credit-card.svg) 15px center no-repeat,#F1CDB3;
+    border-radius: 9px;
+    padding: 10px 15px 10px 60px;
+    @include font($size:2rem, $height: 2.3rem, $style: italic);
+    color: #545454;
+    width: 350px;
+    display: block;
+    letter-spacing: 0.06em;
+}
+.donation-note{
+    font-family: Arial, sans-serif; 
+    max-width: 380px;
+    color: #B2B2B2;
+    @include font($size:1.2rem, $height: 1.8rem);
+    margin-top: 20px;
+    font-style: italic;
+}
+
+@media screen and (max-width:1100px) {
+    .donation-layout-2-columns{
+        flex-wrap: wrap;
+        row-gap: 60px;
+        & img{
+            order: 2;
+        }
+        & .donation__block{
+            order: 1;
+            padding-left: 0;
+            max-width: 100%;
+            padding-left: 164px;
+            padding-right: 164px;
+        }
+        .donation-note{
+            max-width: 100%;
+        }
+    }
+}
+@media screen and (max-width:700px) {
+
+    .donation-layout-2-columns .donation__block{
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width:550px) {
+    .donation__wrapper{
+        padding-top: 42px;
+        padding-bottom: 42px;
+
+    }
+    .donation-layout-2-columns{
+        row-gap: 39px;
+     & img{
+        max-width: 90%;
+     }
+    }
+    .donation-card a{
+        @include font($size:1.5rem, $height: 1.7rem, $style: italic);
+        width: 281px;
+        height: 43px;
+        padding-top: 12px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .donation-desc{
+        letter-spacing: 0;
+        line-height: 2.4rem;
+        text-align: center;
+    }
+    .donation-note{
+        max-width: 280px;
+        text-align: justify;
+    }
+}
